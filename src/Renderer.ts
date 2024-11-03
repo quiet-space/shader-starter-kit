@@ -1,5 +1,6 @@
 import vertexShaderSource from './shaders/vertexShader.glsl';
 import fragmentShaderSource from './shaders/fragmentShader.glsl';
+import practicalShaderSource from './shaders/practice.glsl';
 
 export interface GLRendererOptions {
   width: number;
@@ -52,6 +53,7 @@ export default class Renderer {
     if (!fragmentShader) {
       throw new Error('Fragment Shader를 컴파일할 수 없습니다.');
     }
+
 
     const program = this.createProgram(vertexShader, fragmentShader);
     if (!program) {
